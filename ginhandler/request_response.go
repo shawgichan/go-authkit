@@ -85,10 +85,9 @@ func NewSDKUserResponse(user core.User) UserResponse {
 
 // TokenResponse is returned on successful login or token refresh.
 type TokenResponse struct {
-	AccessToken string `json:"access_token"`
-	// RefreshToken string    `json:"refresh_token,omitempty"` // If you implement refresh tokens
-	User      UserResponse `json:"user"`
-	ExpiresAt time.Time    `json:"expires_at"` // Expiry of the access token
+	AccessToken string       `json:"access_token"`
+	User        UserResponse `json:"user"`
+	ExpiresAt   time.Time    `json:"expires_at"` // Expiry of the access token
 }
 
 // MessageResponse is for simple status messages.
